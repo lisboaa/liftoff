@@ -7,8 +7,6 @@ interface IUserRequest {
     admin?: boolean;
 }
 
-console.log("Entrou no service");
-
 class CreateUserService {
     async execute({ name, email, admin } : IUserRequest) {
         const usersRepository = getCustomRepository(UsersRepositories);
